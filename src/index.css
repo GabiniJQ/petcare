@@ -1,1 +1,35 @@
 @import "tailwindcss";
+@theme {
+  --color-primary: #E67E22;
+  --color-secondary: #FFFEFA;
+
+  --color-primary-dark: #d47420;
+  --color-secondary-dark: #f7f7f7;
+
+  --font-title: 'Poppins', sans-serif;
+}
+
+:root {
+  font-family: 'Inter', sans-serif;
+}
+
+.hero-bg {
+  background-image: url('/img/hero-img.webp');
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.nav-inset-shadow {
+  box-shadow: inset 0 -2px 11px 0px rgba(218, 218, 218, 0.19);
+}
+
+@utility title {
+  @apply font-title font-bold leading-11
+}
+
+@utility nav-blur {
+  @apply blur-2xl;
+}
