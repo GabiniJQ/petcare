@@ -6,6 +6,8 @@
   --color-primary-dark: #d47420;
   --color-secondary-dark: #f7f7f7;
 
+  --color-blue-icon: #E6EDF8;
+
   --font-title: 'Poppins', sans-serif;
 }
 
@@ -28,6 +30,10 @@
 
 @utility title {
   @apply font-title font-bold leading-11
+}
+
+@utility subtitle {
+  @apply font-title font-semibold text-center
 }
 
 @utility nav-blur {

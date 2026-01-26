@@ -18,17 +18,17 @@ const Navbar = () => {
         )}
       >
         {
-          !isTopScreen && <div className='absolute inset-0 backdrop-blur-xs -z-10 '></div>
+          !isTopScreen && <div className='absolute inset-0 backdrop-blur-[3px] -z-10 '></div>
         }
 
         <img
           src='/img/petcare-logo.webp'
           alt='PetCare Logo'
-          width={120}
-          height={120}
+          width={100}
+          height={100}
         />
 
-        <div className='flex items-center justify-center w-1/6'>
+        <div className='flex items-center justify-center min-w-25'>
           <button onClick={() => setMobileMenuOpen(!MobileMenuOpen)}>
             <HiBars3 className='text-orange-600 size-12' />
           </button>

@@ -15,11 +15,11 @@ const Hero = () => {
         </h2>
 
         <div className='flex gap-4 '>
-          <Button className='w-full'>
+          <Button className='w-full text-xs'>
             Buscar cuidador
           </Button>
 
-          <Button variant='secondary' className='w-full'>
+          <Button variant='secondary' className='w-full text-xs'>
             Quiero cuidar
           </Button>
         </div>
