@@ -7,10 +7,12 @@ import useTopScreen from '../../shared/hooks/useTopScreen'
 
 const Navbar = () => {
   const [MobileMenuOpen, setMobileMenuOpen] = useState(false)
-  const { isTopScreen } = useTopScreen()
+  const { isTopScreen, isScrollUp } = useTopScreen()
 
   return (
-    <div className='fixed top-0 z-50 w-full'>
+    <div className={clsx('absolute top-0 z-50 w-full transition',
+      (isScrollUp || MobileMenuOpen) && 'fixed',
+    )}>
       <nav
         className={clsx(
           'flex justify-between items-center relative transition',
@@ -35,7 +37,18 @@ const Navbar = () => {
         </div>
       </nav>
 
-      {MobileMenuOpen && <MenuMobile />}
+      {MobileMenuOpen && (
+        <>
+          <MenuMobile />
+
+          <div className='bg-black/50 min-h-screen'
+            onClick={() => setMobileMenuOpen(false)}
+          >
+          </div>
+        </>
+      )}
+
+      
     </div>
   )
 }

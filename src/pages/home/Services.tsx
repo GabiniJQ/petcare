@@ -1,65 +1,83 @@
-import { MdOutlineCalendarMonth } from 'react-icons/md'
-import IconCircle from '../../shared/components/IconCircle'
+import {
+  ServiceCard,
+  ServiceCardImage,
+  ServiceCardText,
+  ServiceCardTitle,
+} from '../../shared/components/ServiceCard'
 
 const Services = () => {
   return (
-    <section className='flex flex-col gap-12 py-12'>
-      <h1 className='subtitle'>Cuidar a tu mascota nunca fue tan fácil</h1>
+    <section className='flex flex-col gap-10  py-10 px-4 bg-card-service'>
+      <h1 className='subtitle text-white'>Servicios pensados para cada necesidad</h1>
 
-      <div className='flex flex-col'>
-        <div className='flex justify-between gap-4'>
-          <div className='flex items-center justify-center'>
-            <IconCircle>
-              <MdOutlineCalendarMonth className='text-primary size-6' />
-            </IconCircle>
-          </div>
+      <div className='grid gap-4'>
+        <ServiceCard>
+          <ServiceCardTitle>Paseos diarios y personalizados</ServiceCardTitle>
 
-          <div className='flex flex-col gap-1 w-5/6'>
-            <h2 className='text-sm font-medium'>
-              1. Busca el servicio que necesitas
-            </h2>
+          <ServiceCardText>
+            Tu mascota se ejercita, se divierte y mantiene una rutina saludable,
+            incluso cuando no puedes sacarla tú.
+          </ServiceCardText>
 
-            <p className='text-xs'>
-              Paseos, cuidado por horas, baño, peluquería o atención especial.
-            </p>
-          </div>
-        </div>
+          <ServiceCardImage
+            className='relative -bottom-2'
+            src='img/walk-service.webp'
+            alt='Tarjeta de paseo personalizado'
+            width={340}
+            height={380}
+          />
+        </ServiceCard>
 
-        <div className='flex justify-center items-center after:border after:h-8 after:my-4'></div>
+        <ServiceCard>
+          <ServiceCardTitle>Cuidado por horas o días</ServiceCardTitle>
 
-        <div className='flex justify-between gap-4'>
-          <div className='flex items-center justify-center'>
-            <IconCircle>
-              <MdOutlineCalendarMonth className='text-primary size-6' />
-            </IconCircle>
-          </div>
+          <ServiceCardText>
+            Ideal para viajes, trabajo o compromisos. Tu mascota recibe
+            atención, comida y cariño.
+          </ServiceCardText>
 
-          <div className='flex flex-col gap-1 w-5/6'>
-            <h2 className='text-sm font-medium'>
-              2. Elige un cuidador verificado
-            </h2>
+          <ServiceCardImage
+            className='relative -bottom-4'
+            src='img/sitting-card-service.webp'
+            alt='Tarjeta de paseo personalizado'
+            width={340}
+            height={380}
+          />
+        </ServiceCard>
 
-            <p className='text-xs'>
-              Revisa perfiles, calificaciones y experiencia.
-            </p>
-          </div>
-        </div>
+        <ServiceCard>
+          <ServiceCardTitle>Higiene y estética sin estrés</ServiceCardTitle>
 
-        <div className='flex justify-center items-center after:border after:h-8 after:my-4'></div>
+          <ServiceCardText>
+            Baños, corte de pelo y cuidado profesional sin largas esperas ni
+            traslados innecesarios.
+          </ServiceCardText>
 
-        <div className='flex justify-between gap-4'>
-          <IconCircle>
-            <MdOutlineCalendarMonth className='text-primary size-6' />
-          </IconCircle>
+          <ServiceCardImage
+            className='relative -bottom-4'
+            src='img/dog-care-service.webp'
+            alt='Tarjeta de paseo personalizado'
+            width={340}
+            height={380}
+          />
+        </ServiceCard>
 
-          <div className='flex flex-col gap-1 w-5/6'>
-            <h2 className='text-sm font-medium'>3. Reserva y relajate</h2>
+        <ServiceCard>
+          <ServiceCardTitle>Atención para mascotas </ServiceCardTitle>
 
-            <p className='text-xs'>
-              Tu mascota queda en buenas manos, tú sigues con tu día.
-            </p>
-          </div>
-        </div>
+          <ServiceCardText>
+            Medicamentos, dietas especiales o cuidado de mascotas mayores con
+            necesidades específicas.
+          </ServiceCardText>
+
+          <ServiceCardImage
+            className='relative -bottom-4'
+            src='img/dog-medical-service.webp'
+            alt='Tarjeta de paseo personalizado'
+            width={340}
+            height={380}
+          />
+        </ServiceCard>
       </div>
     </section>
   )

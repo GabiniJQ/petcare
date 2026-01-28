@@ -2,10 +2,22 @@ import { useEffect, useState } from 'react'
 
 const useTopScreen = () => {
   const [isTopScreen, setIsTopScreen] = useState(true)
-
+  const [currentScroll, setCurrentScroll] = useState(window.scrollY)
+  const [isScrollUp, setIsScrollUp] = useState(false)
+  
   useEffect(() => {
     const onScroll = () => {
+      
       setIsTopScreen(window.scrollY === 0)
+      setCurrentScroll((prevScroll) => {
+        if (prevScroll > window.scrollY) {
+          setIsScrollUp(true)
+        } else {
+          setIsScrollUp(false)
+        }
+        return window.scrollY
+      })
+      
     }
 
     onScroll()
@@ -17,7 +29,7 @@ const useTopScreen = () => {
     }
   }, [])
 
-  return { isTopScreen }
+  return { isTopScreen, isScrollUp, currentScroll }
 }
 
 export default useTopScreen
