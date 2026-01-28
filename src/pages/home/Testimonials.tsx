@@ -67,7 +67,7 @@ export const TestimonialCard = ({
     <div className='flex flex-col gap-2 p-6 rounded-2xl shadow-md bg-white'>
       <BiSolidQuoteLeft className='text-primary size-8' />
 
-      <p className='text-2xs'>{text}</p>
+      <p className='text-2xs font-medium'>{text}</p>
 
       <BiSolidQuoteRight className='text-primary size-8 self-end' />
 
@@ -78,7 +78,7 @@ export const TestimonialCard = ({
           </div>
         </div>
 
-        <p className='flex items-center gap-1 w-2/3 text-2xs font-medium'>
+        <p className='flex items-center gap-1 w-2/3 text-2xs'>
           <GoDash />
           {author}
         </p>

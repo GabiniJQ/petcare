@@ -5,6 +5,7 @@
 
   --color-primary-dark: #d47420;
   --color-secondary-dark: #f7f7f7;
+  --color-blue-dark: #234566;
 
   --color-blue-icon: #E6EDF8;
   --color-blue-dark-gradient: #E6EDF8;/* #234566; */
@@ -14,7 +15,7 @@
 }
 
 :root {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 .hero-bg {
@@ -52,4 +53,8 @@
 
 @utility bg-card-service {
   @apply bg-linear-to-t from-primary/90 to-primary/70;
+}
+
+@utility bg-linear-cta {
+  @apply bg-linear-to-b from-[#E6EDF8] to-[#AACBFF];
 }
