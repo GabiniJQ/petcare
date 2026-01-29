@@ -4,7 +4,7 @@ import IconCircle from '../../shared/components/IconCircle'
 const Steps = () => {
   return (
     <section className='flex flex-col gap-10 py-10 px-4 sm:py-20 sm:px-20 lg:gap-16 xl:px-40'>
-      <h1 className='subtitle'>Cuidar a tu mascota nunca fue tan fácil</h1>
+      <h1 className='subtitle' id='how-works'>Cuidar a tu mascota nunca fue tan fácil</h1>
 
       <div className='flex flex-col lg:max-w-1/2 lg:mx-auto'>
         <div className='flex justify-between gap-4 lg:gap-6'>

@@ -2,7 +2,7 @@ import { Button } from '../../shared/components/Button'
 
 const Hero = () => {
   return (
-    <section className='hero-bg flex flex-col px-6 py-10 lg:px-20 lg:pb-20'>
+    <section className='hero-bg flex flex-col px-6 py-10 lg:px-20 lg:pb-20 2xl:px-40'>
       <div className='flex flex-1 flex-col gap-6 justify-end xl:justify-center xl:relative'>
         <h1 className='title text-4xl text-white lg:text-6xl lg:leading-14 xl:max-w-1/3 xl:text-7xl xl:leading-20 2xl:text-8xl'>
           El <span className='text-primary'>cuidado</span> que tu mascota

@@ -1,4 +1,5 @@
 import Navbar from '../../shared/components/Navbar'
+import ScrollToTop from '../../shared/components/ScrollToTop'
 import Benefits from './Benefits'
 import FinalCTA from './FinalCTA'
 import Footer from './Footer'
@@ -24,6 +25,8 @@ const HomePage = () => {
         <Benefits />
 
         <FinalCTA />
+
+        <ScrollToTop />
 
         <Footer />
       </div>

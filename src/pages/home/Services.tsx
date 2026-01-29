@@ -7,10 +7,10 @@ import {
 
 const Services = () => {
   return (
-    <section className='flex flex-col gap-10  py-10 px-4 bg-card-service sm:py-20 sm:px-20 xl:px-40'>
+    <section className='flex flex-col gap-10  py-10 px-4 bg-blue-black sm:py-20 sm:px-20 xl:px-40'>
       <h1 className='subtitle text-white'>Servicios pensados para cada necesidad</h1>
 
-      <div className='grid gap-4 md:grid-cols-2 lg:p-10 place-items-center xl:max-w-4/5 xl:mx-auto'>
+      <div className='grid gap-4 md:grid-cols-2 lg:p-10 place-items-center xl:max-w-4/5 xl:mx-auto 2xl:grid-cols-4'>
         <ServiceCard>
           <ServiceCardTitle>Paseos diarios y personalizados</ServiceCardTitle>
 

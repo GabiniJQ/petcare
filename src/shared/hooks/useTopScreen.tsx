@@ -10,7 +10,7 @@ const useTopScreen = () => {
       
       setIsTopScreen(window.scrollY === 0)
       setCurrentScroll((prevScroll) => {
-        if (prevScroll > window.scrollY) {
+        if (prevScroll > window.scrollY && window.scrollY !== 0) {
           setIsScrollUp(true)
         } else {
           setIsScrollUp(false)

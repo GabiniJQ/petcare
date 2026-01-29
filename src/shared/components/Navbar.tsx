@@ -11,7 +11,7 @@ const Navbar = () => {
   const { isTopScreen, isScrollUp } = useTopScreen()
 
   return (
-    <div
+    <header
       className={clsx(
         'absolute top-0 z-50 w-full transition',
         (isScrollUp || MobileMenuOpen) && 'fixed',
@@ -19,7 +19,7 @@ const Navbar = () => {
     >
       <nav
         className={clsx(
-          'flex justify-between items-center relative transition w-full',
+          'flex justify-between items-center relative transition w-full 2xl:px-40',
           !isTopScreen && 'nav-inset-shadow',
         )}
       >
@@ -32,17 +32,32 @@ const Navbar = () => {
           alt='PetCare Logo'
           width={100}
           height={100}
-          className='sm:w-36'
+          className=''
         />
 
         {/* Desktop Nav Buttons */}
-        <div className='hidden w-full justify-between items-center px-10 font-medium lg:flex '>
-          <div className='flex gap-4 xl:gap-6'>
-            <a href=''>INICIO</a>
-            <a href=''>CÓMO FUNCIONA</a>
-            <a href=''>SERVICIOS</a>
-            <a href=''>TESTIMONIOS</a>
-            <a href=''>BENEFICIOS</a>
+        <div className='hidden w-full justify-between items-center px-10 text-sm font-medium lg:flex '>
+          <div
+            className={clsx(
+              'flex gap-4 xl:gap-6',
+              isScrollUp && 'text-shadow-neutral-50 text-shadow-md',
+            )}
+          >
+            <button className='hover:text-primary cursor-pointer' onClick={() => scrollTo({ top: 0, behavior: 'smooth' })}>
+              INICIO
+            </button>
+            <a href='#how-works' className='hover:text-primary'>
+              CÓMO FUNCIONA
+            </a>
+            <a href='#services' className='hover:text-primary'>
+              SERVICIOS
+            </a>
+            <a href='#testimonials' className='hover:text-primary'>
+              TESTIMONIOS
+            </a>
+            <a href='#benefits' className='hover:text-primary'>
+              BENEFICIOS
+            </a>
           </div>
 
           <div className='flex items-center justify-center gap-4'>
@@ -53,7 +68,7 @@ const Navbar = () => {
 
         <div className='flex items-center justify-center min-w-25 lg:hidden'>
           <button onClick={() => setMobileMenuOpen(!MobileMenuOpen)}>
-            <HiBars3 className='text-orange-600 size-12 sm:size-20' />
+            <HiBars3 className='text-orange-600 size-12' />
           </button>
         </div>
       </nav>
@@ -68,7 +83,7 @@ const Navbar = () => {
           ></div>
         </>
       )}
-    </div>
+    </header>
   )
 }
 
