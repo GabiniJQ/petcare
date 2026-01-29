@@ -1,11 +1,15 @@
 
 const MenuMobile = () => {
   return (
-    <div className='flex flex-col  absolute w-full text-primary bg-secondary border-y border-gray-200 shadow'>
+    <div className='flex flex-col  absolute w-full text-black bg-secondary border-y border-gray-200 shadow'>
       <a href='#home' className='flex items-center justify-center text-center h-14 border-b border-gray-200'>
         INICIO
       </a>
 
+      <a href='#home' className='flex items-center justify-center text-center h-14 border-b border-gray-200'>
+        CÓMO FUNCIONA
+      </a>
+      
       <a href='#home' className='flex items-center justify-center text-center h-14 border-b border-gray-200'>
         SERVICIOS
       </a>

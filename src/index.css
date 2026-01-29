@@ -40,7 +40,7 @@
 }
 
 @utility subtitle {
-  @apply font-title font-semibold text-center
+  @apply font-title font-semibold text-center md:text-2xl
 }
 
 @utility text-2xs {
@@ -57,4 +57,20 @@
 
 @utility bg-linear-cta {
   @apply bg-linear-to-b from-[#E6EDF8] to-[#AACBFF];
+}
+
+@utility footer-icon {
+  @apply hover:-translate-y-2 transition cursor-pointer
+}
+
+@utility bg-benefits {
+  @apply bg-[url('/img/puppies-collection.webp')] bg-blend-luminosity
+}
+
+@utility bg-linear-primary {
+  @apply bg-linear-to-br from-primary/90 to-yellow-400 text-white;
+}
+
+@utility bg-benefit-card {
+  @apply bg-linear-primary shadow-md border-2 border-amber-500 rounded-xl p-4;
 }

@@ -24,12 +24,12 @@ const TestimonialData = [
 
 const Testimonials = () => {
   return (
-    <section className='flex flex-col gap-10 py-10 px-4'>
+    <section className='flex flex-col items-center gap-10 py-10 px-4 sm:py-20 sm:px-20 lg:gap-20 xl:px-40'>
       <h1 className='subtitle'>
         Dueños y cuidadores que ya confían en nosotros
       </h1>
 
-      <div className='grid gap-4'>
+      <div className='grid gap-4 md:grid-cols-3 xl:max-w-4/5 xl:mx-auto'>
         {TestimonialData.map(({ author, text, imgSrc, imgAlt }) => (
           <TestimonialCard
             author={author}
@@ -40,7 +40,7 @@ const Testimonials = () => {
         ))}
       </div>
 
-      <h2 className='font-medium text-xs italic'>
+      <h2 className='font-medium text-xs italic lg:text-lg'>
         Testimonios auténticos que reflejan cómo nuestra plataforma
         <span className='text-primary'> conecta </span>
         personas, <span className='text-primary'> genera </span> confianza y{' '}
@@ -64,12 +64,14 @@ export const TestimonialCard = ({
   author,
 }: TestimonialCardProps) => {
   return (
-    <div className='flex flex-col gap-2 p-6 rounded-2xl shadow-md bg-white'>
-      <BiSolidQuoteLeft className='text-primary size-8' />
+    <div className='flex flex-col gap-2 p-6 rounded-2xl shadow-md bg-white max-w-87.5'>
+      <div className='flex flex-col gap-2 h-2/3'>
+        <BiSolidQuoteLeft className='text-primary size-8 xl:size-14' />
 
-      <p className='text-2xs font-medium'>{text}</p>
+        <p className='text-2xs font-medium h-2/3 lg:text-base'>{text}</p>
 
-      <BiSolidQuoteRight className='text-primary size-8 self-end' />
+        <BiSolidQuoteRight className='text-primary size-8 self-end xl:size-14' />
+      </div>
 
       <div className='flex gap-1 items-center'>
         <div className='flex items-center justify-center w-1/3'>
@@ -78,7 +80,7 @@ export const TestimonialCard = ({
           </div>
         </div>
 
-        <p className='flex items-center gap-1 w-2/3 text-2xs'>
+        <p className='flex items-center gap-1 w-2/3 text-2xs lg:text-sm'>
           <GoDash />
           {author}
         </p>

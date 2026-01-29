@@ -7,10 +7,10 @@ import {
 
 const Services = () => {
   return (
-    <section className='flex flex-col gap-10  py-10 px-4 bg-card-service'>
+    <section className='flex flex-col gap-10  py-10 px-4 bg-card-service sm:py-20 sm:px-20 xl:px-40'>
       <h1 className='subtitle text-white'>Servicios pensados para cada necesidad</h1>
 
-      <div className='grid gap-4'>
+      <div className='grid gap-4 md:grid-cols-2 lg:p-10 place-items-center xl:max-w-4/5 xl:mx-auto'>
         <ServiceCard>
           <ServiceCardTitle>Paseos diarios y personalizados</ServiceCardTitle>
 
@@ -37,7 +37,7 @@ const Services = () => {
           </ServiceCardText>
 
           <ServiceCardImage
-            className='relative -bottom-4'
+            className='relative -bottom-6'
             src='img/sitting-card-service.webp'
             alt='Tarjeta de paseo personalizado'
             width={340}
@@ -71,7 +71,7 @@ const Services = () => {
           </ServiceCardText>
 
           <ServiceCardImage
-            className='relative -bottom-4'
+            className='relative -bottom-4 md:scale-105'
             src='img/dog-medical-service.webp'
             alt='Tarjeta de paseo personalizado'
             width={340}

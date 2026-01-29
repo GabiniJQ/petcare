@@ -8,7 +8,7 @@ type IconCircleProps = {
 
 const IconCircle = ({ children, className }: IconCircleProps) => {
   return (
-    <div className={clsx('flex items-center justify-center bg-blue-icon size-12 rounded-full', className)}>
+    <div className={clsx('flex items-center justify-center bg-blue-icon size-12 rounded-full lg:size-16', className)}>
       {children}
     </div>
   )
