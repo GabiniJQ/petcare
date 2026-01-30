@@ -1,30 +1,32 @@
+import { NAVIGATION } from '../../shared/const/navigation'
+import NavBtn from '../../shared/components/NavBtn'
 
 const MenuMobile = () => {
   return (
     <div className='flex flex-col  absolute w-full text-black bg-secondary border-y border-gray-200 shadow'>
-      <a href='#home' className='flex items-center justify-center text-center h-14 border-b border-gray-200'>
+      <NavBtn className='mobile-nav-btn' target={NAVIGATION.HOME}>
         INICIO
-      </a>
+      </NavBtn>
 
-      <a href='#home' className='flex items-center justify-center text-center h-14 border-b border-gray-200'>
+      <NavBtn className='mobile-nav-btn' target={NAVIGATION.HOW_WORKS}>
         CÓMO FUNCIONA
-      </a>
-      
-      <a href='#home' className='flex items-center justify-center text-center h-14 border-b border-gray-200'>
+      </NavBtn>
+
+      <NavBtn className='mobile-nav-btn' target={NAVIGATION.SERVICES}>
         SERVICIOS
-      </a>
+      </NavBtn>
 
-      <a href='#home' className='flex items-center justify-center text-center h-14 border-b border-gray-200'>
+      <NavBtn className='mobile-nav-btn' target={NAVIGATION.TESTIMONIALS}>
         TESTIMONIOS
-      </a>
+      </NavBtn>
 
-      <a href='#home' className='flex items-center justify-center text-center h-14 border-b border-gray-200'>
+      <NavBtn className='mobile-nav-btn' target={NAVIGATION.BENEFITS}>
         BENEFICIOS
-      </a>
+      </NavBtn>
 
-      <a href='#home' className='flex items-center justify-center text-center h-14'>
+      <NavBtn className='mobile-nav-btn' target={NAVIGATION.CONTACT}>
         CONTACTO
-      </a>
+      </NavBtn>
     </div>
   )
 }

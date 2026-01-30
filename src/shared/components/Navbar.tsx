@@ -5,6 +5,8 @@ import MenuMobile from '../../pages/home/MenuMobile'
 import { useState } from 'react'
 import useTopScreen from '../../shared/hooks/useTopScreen'
 import { Button } from './Button'
+import { NAVIGATION } from '../const/navigation'
+import NavBtn from './NavBtn'
 
 const Navbar = () => {
   const [MobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -32,36 +34,36 @@ const Navbar = () => {
           alt='PetCare Logo'
           width={100}
           height={100}
-          className=''
         />
 
         {/* Desktop Nav Buttons */}
         <div className='hidden w-full justify-between items-center px-10 text-sm font-medium lg:flex '>
-          <div
-            className={clsx(
-              'flex gap-4 xl:gap-6',
-              isScrollUp && 'text-shadow-neutral-50 text-shadow-md',
-            )}
-          >
-            <button className='hover:text-primary cursor-pointer' onClick={() => scrollTo({ top: 0, behavior: 'smooth' })}>
+          <div className='flex gap-4 xl:gap-6'>
+            <NavBtn className='nav-btn' target={NAVIGATION.HOME}>
               INICIO
-            </button>
-            <a href='#how-works' className='hover:text-primary'>
+            </NavBtn>
+
+            <NavBtn className='nav-btn' target={NAVIGATION.HOW_WORKS}>
               CÓMO FUNCIONA
-            </a>
-            <a href='#services' className='hover:text-primary'>
+            </NavBtn>
+
+            <NavBtn className='nav-btn' target={NAVIGATION.SERVICES}>
               SERVICIOS
-            </a>
-            <a href='#testimonials' className='hover:text-primary'>
+            </NavBtn>
+
+            <NavBtn className='nav-btn' target={NAVIGATION.TESTIMONIALS}>
               TESTIMONIOS
-            </a>
-            <a href='#benefits' className='hover:text-primary'>
+            </NavBtn>
+
+            <NavBtn className='nav-btn' target={NAVIGATION.BENEFITS}>
               BENEFICIOS
-            </a>
+            </NavBtn>
           </div>
 
           <div className='flex items-center justify-center gap-4'>
-            <a href=''>CONTACTO</a>
+            <NavBtn className='nav-btn' target={NAVIGATION.CONTACT}>
+              CONTACTO
+            </NavBtn>
             <Button>UNIRSE</Button>
           </div>
         </div>

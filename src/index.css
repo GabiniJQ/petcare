@@ -51,6 +51,14 @@
   @apply blur-2xl;
 }
 
+@utility nav-btn { 
+  @apply cursor-pointer hover:text-primary
+}
+
+@utility mobile-nav-btn { 
+  @apply flex items-center justify-center text-center h-14 border-b border-gray-200
+}
+
 @utility bg-card-service {
   @apply bg-linear-to-t from-primary/90 to-primary/70;
 }
