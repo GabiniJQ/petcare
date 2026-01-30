@@ -1,4 +1,5 @@
 import clsx from 'clsx'
+import { motion } from 'motion/react'
 import type { ReactNode } from 'react'
 
 type ServiceCardProps = {
@@ -7,17 +8,23 @@ type ServiceCardProps = {
 }
 
 export const ServiceCard = ({ className, children }: ServiceCardProps) => {
+  const item = {
+    hidden: { opacity: 0, x: -20 },
+    show: { opacity: 1, x: 0 },
+  }
+
   return (
-    <div
+    <motion.div
       className={clsx(
         'relative flex flex-col gap-2 pt-4 bg-blue-black max-w-96 rounded-2xl overflow-hidden shadow-lg shadow-amber-400 border-2 border-amber-400 lg:pt-10 lg:min-h-100 xl:h-full',
         className,
       )}
+      variants={item}
     >
       <div className='absolute size-full inset-0 bg-orange-fade'></div>
 
       {children}
-    </div>
+    </motion.div>
   )
 }
 

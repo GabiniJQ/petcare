@@ -1,3 +1,4 @@
+import { motion, stagger } from 'motion/react'
 import {
   ServiceCard,
   ServiceCardImage,
@@ -6,11 +7,29 @@ import {
 } from '../../shared/components/ServiceCard'
 
 const Services = () => {
+  const container = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        delayChildren: stagger(0.1),
+      },
+    },
+  }
+
   return (
     <section className='flex flex-col gap-10  py-10 px-4 bg-blue-black sm:py-20 sm:px-20 xl:px-40'>
-      <h1 className='subtitle text-white'>Servicios pensados para cada necesidad</h1>
+      <h1 className='subtitle text-white'>
+        Servicios pensados para cada necesidad
+      </h1>
 
-      <div className='grid gap-4 md:grid-cols-2 lg:p-10 place-items-center xl:max-w-4/5 xl:mx-auto 2xl:grid-cols-4'>
+      <motion.div
+        className='grid gap-4 md:grid-cols-2 lg:p-10 place-items-center xl:max-w-4/5 xl:mx-auto 2xl:grid-cols-4'
+        whileInView='show'
+        initial='hidden'
+        variants={container}
+        viewport={{ amount: 0.7, once: true }}
+      >
         <ServiceCard>
           <ServiceCardTitle>Paseos diarios y personalizados</ServiceCardTitle>
 
@@ -78,7 +97,7 @@ const Services = () => {
             height={380}
           />
         </ServiceCard>
-      </div>
+      </motion.div>
     </section>
   )
 }

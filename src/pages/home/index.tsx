@@ -5,7 +5,7 @@ import FinalCTA from './FinalCTA'
 import Footer from './Footer'
 import Hero from './Hero'
 import Services from './Services'
-import Steps from './Steps'
+import HowWorks from './HowWorks'
 import Testimonials from './Testimonials'
 
 const HomePage = () => {
@@ -16,7 +16,7 @@ const HomePage = () => {
       <Hero />
 
       <div className=''>
-        <Steps />
+        <HowWorks />
         
         <Services />
 

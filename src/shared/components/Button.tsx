@@ -16,7 +16,7 @@ export function Button({
   return (
     <button
       className={clsx(
-        'inline-flex items-center justify-center rounded-md px-4 py-2 font-medium transition-colors cursor-pointer focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none',
+        'inline-flex items-center justify-center rounded-md px-4 py-2 font-medium transition-all cursor-pointer focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none hover:scale-105 hover:-translate-y-0.5',
         {
           'bg-primary text-white hover:bg-primary-dark focus:ring-primary':
             variant === 'primary',
