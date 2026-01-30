@@ -32,6 +32,7 @@ const Testimonials = () => {
       <div className='grid gap-4 md:grid-cols-3 xl:max-w-4/5 xl:mx-auto'>
         {TestimonialData.map(({ author, text, imgSrc, imgAlt }) => (
           <TestimonialCard
+            key={author}
             author={author}
             text={text}
             imgSrc={imgSrc}
