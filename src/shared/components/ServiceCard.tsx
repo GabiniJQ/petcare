@@ -14,10 +14,6 @@ export const ServiceCard = ({ className, children }: ServiceCardProps) => {
         className,
       )}
     >
-      {/* <div className='absolute -top-4 left-1/2 translate-x-1/3 w-1/3 h-1/3 bg-yellow-200 blur-3xl'></div>
-
-      <div className='absolute bottom-0 left-0 w-2/3 h-1/3 bg-yellow-200 blur-3xl'></div> */}
-
       <div className='absolute size-full inset-0 bg-orange-fade'></div>
 
       {children}
