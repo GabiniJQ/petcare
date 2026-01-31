@@ -1,5 +1,6 @@
 import { motion } from 'motion/react'
 import { Button } from '../../shared/components/Button'
+import { NAVIGATION } from '../../shared/const/navigation'
 
 const Hero = () => {
   const container = {
@@ -22,7 +23,7 @@ const Hero = () => {
   }
 
   return (
-    <section className='hero-bg flex flex-col px-6 py-10 lg:px-20 lg:pb-20 2xl:px-40'>
+    <section className='hero-bg flex flex-col px-6 py-10 lg:px-20 lg:pb-20 2xl:px-40' id={NAVIGATION.HOME}>
       <motion.div
         className='flex flex-1 flex-col gap-6 justify-end xl:justify-center xl:relative'
         variants={container}

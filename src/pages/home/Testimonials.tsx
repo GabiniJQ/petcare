@@ -1,5 +1,8 @@
 import { BiSolidQuoteLeft, BiSolidQuoteRight } from 'react-icons/bi'
 import { GoDash } from 'react-icons/go'
+import useStore from '../../store/useStore'
+import { motion } from 'motion/react'
+import { NAVIGATION } from '../../shared/const/navigation'
 
 const TestimonialData = [
   {
@@ -23,9 +26,15 @@ const TestimonialData = [
 ]
 
 const Testimonials = () => {
+  const { updateCurrentSection } = useStore()
+
   return (
-    <section className='flex flex-col items-center gap-10 py-10 px-4 sm:py-20 sm:px-20 lg:gap-20 xl:px-40'>
-      <h1 className='subtitle'>
+    <motion.section
+      className='flex flex-col items-center gap-10 py-10 px-4 sm:py-20 sm:px-20 lg:gap-20 xl:px-40'
+      onViewportEnter={() => updateCurrentSection(NAVIGATION.TESTIMONIALS)}
+      viewport={{ amount: 0.8 }}
+    >
+      <h1 className='subtitle scroll-mt-25' id={NAVIGATION.TESTIMONIALS}>
         Dueños y cuidadores que ya confían en nosotros
       </h1>
 
@@ -47,7 +56,7 @@ const Testimonials = () => {
         personas, <span className='text-primary'> genera </span> confianza y{' '}
         <span className='text-primary'> mejora </span> la vida de las mascotas.
       </h2>
-    </section>
+    </motion.section>
   )
 }
 

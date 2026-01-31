@@ -5,6 +5,8 @@ import {
 } from 'react-icons/md'
 import IconCircle from '../../shared/components/IconCircle'
 import { motion, stagger } from 'motion/react'
+import useStore from '../../store/useStore'
+import { NAVIGATION } from '../../shared/const/navigation'
 
 const HowWorks = () => {
   const container = {
@@ -22,9 +24,15 @@ const HowWorks = () => {
     show: { opacity: 1 },
   }
 
+  const { updateCurrentSection } = useStore()
+
   return (
-    <section className='flex flex-col gap-10 py-10 px-4 sm:py-20 sm:px-20 lg:gap-16 xl:px-40'>
-      <h1 className='subtitle' id='how-works'>
+    <motion.section
+      className='flex flex-col gap-10 py-10 px-4 sm:py-20 sm:px-20 lg:gap-16 xl:px-40'
+      onViewportEnter={() => updateCurrentSection(NAVIGATION.HOW_WORKS)}
+      viewport={{ amount: 0.8 }}
+    >
+      <h1 className='subtitle scroll-mt-25' id={NAVIGATION.HOW_WORKS}>
         Cuidar a tu mascota nunca fue tan fácil
       </h1>
 
@@ -106,7 +114,7 @@ const HowWorks = () => {
           </div>
         </motion.div>
       </motion.div>
-    </section>
+    </motion.section>
   )
 }
 

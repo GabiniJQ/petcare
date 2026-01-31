@@ -1,9 +1,10 @@
 import { Button } from '../../shared/components/Button'
+import { NAVIGATION } from '../../shared/const/navigation'
 
 const FinalCTA = () => {
   return (
     <section className='flex flex-col gap-10 py-10 px-4 sm:py-20 sm:px-20 lg:gap-20'>
-      <h1 className='subtitle max-w-60 mx-auto sm:max-w-none'>
+      <h1 className='subtitle max-w-60 mx-auto sm:max-w-none scroll-mt-25' id={NAVIGATION.CONTACT}>
         Empieza hoy a <span className='text-primary'>cuidar</span> o encuentra
         un <span className='text-primary'>cuidador</span>
       </h1>

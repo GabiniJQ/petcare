@@ -7,6 +7,7 @@ import useTopScreen from '../../shared/hooks/useTopScreen'
 import { Button } from './Button'
 import { NAVIGATION } from '../const/navigation'
 import NavBtn from './NavBtn'
+import scrollTo from '../utils/scrollTo'
 
 const Navbar = () => {
   const [MobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -61,9 +62,9 @@ const Navbar = () => {
           </div>
 
           <div className='flex items-center justify-center gap-4'>
-            <NavBtn className='nav-btn' target={NAVIGATION.CONTACT}>
+            <button className='nav-btn' onClick={() => scrollTo(NAVIGATION.CONTACT)}>
               CONTACTO
-            </NavBtn>
+            </button>
             <Button>UNIRSE</Button>
           </div>
         </div>

@@ -1,10 +1,19 @@
+import { motion } from 'motion/react'
 import { BiSolidConversation } from 'react-icons/bi'
 import { MdContactSupport, MdVerifiedUser } from 'react-icons/md'
+import useStore from '../../store/useStore'
+import { NAVIGATION } from '../../shared/const/navigation'
 
 const Benefits = () => {
+  const { updateCurrentSection } = useStore()
+
   return (
-    <section className='flex flex-col gap-10 py-10 px-4 bg-primary sm:py-20 sm:px-20 lg:gap-20 xl:px-60 xl:bg-benefits'>
-      <h1 className='subtitle text-white'>
+    <motion.section
+      className='flex flex-col gap-10 py-10 px-4 bg-primary sm:py-20 sm:px-20 lg:gap-20 xl:px-60 xl:bg-benefits'
+      onViewportEnter={() => updateCurrentSection(NAVIGATION.BENEFITS)}
+      viewport={{ amount: 0.8 }}
+    >
+      <h1 className='subtitle text-white scroll-mt-25' id={NAVIGATION.BENEFITS}>
         Tu tranquilidad es nuestra prioridad
       </h1>
 
@@ -69,7 +78,7 @@ const Benefits = () => {
           className='w-fit xl:hidden'
         />
       </div>
-    </section>
+    </motion.section>
   )
 }
 

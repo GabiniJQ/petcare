@@ -2,6 +2,7 @@ import clsx from 'clsx'
 import type { ReactNode } from 'react'
 import useStore from '../../store/useStore'
 import useTopScreen from '../hooks/useTopScreen'
+import scrollTo from '../utils/scrollTo'
 
 type NavBtnProps = {
   className?: string
@@ -20,7 +21,10 @@ const NavBtn = ({ className, children, target }: NavBtnProps) => {
         currentSection === target && 'text-primary ',
         isScrollUp && 'lg:text-shadow-neutral-50 lg:text-shadow-md',
       )}
-      onClick={() => updateCurrentSection(target)}
+      onClick={() => {
+        updateCurrentSection(target)
+        scrollTo(target)
+      }}
     >
       {children}
     </button>

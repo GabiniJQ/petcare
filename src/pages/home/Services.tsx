@@ -5,6 +5,8 @@ import {
   ServiceCardText,
   ServiceCardTitle,
 } from '../../shared/components/ServiceCard'
+import useStore from '../../store/useStore'
+import { NAVIGATION } from '../../shared/const/navigation'
 
 const Services = () => {
   const container = {
@@ -17,9 +19,15 @@ const Services = () => {
     },
   }
 
+  const { updateCurrentSection } = useStore()
+
   return (
-    <section className='flex flex-col gap-10  py-10 px-4 bg-blue-black sm:py-20 sm:px-20 xl:px-40'>
-      <h1 className='subtitle text-white'>
+    <motion.section
+      className='flex flex-col gap-10  py-10 px-4 bg-blue-black sm:py-20 sm:px-20 xl:px-40'
+      onViewportEnter={() => updateCurrentSection(NAVIGATION.SERVICES)}
+      viewport={{ amount: 0.8 }}
+    >
+      <h1 className='subtitle text-white scroll-mt-25' id={NAVIGATION.SERVICES}>
         Servicios pensados para cada necesidad
       </h1>
 
@@ -98,7 +106,7 @@ const Services = () => {
           />
         </ServiceCard>
       </motion.div>
-    </section>
+    </motion.section>
   )
 }
 
