@@ -1,73 +1,118 @@
-# React + TypeScript + Vite
+# 🐾 PetCare – Landing Page
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🌍 Read this in other languages: [Español](README.es.md)
 
-Currently, two official plugins are available:
+Frontend landing page for **PetCare**, an application that connects pet owners with trusted caregivers for walks, temporary care, and special services such as bathing and grooming.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The goal of this landing page is to present the app’s value proposition, build trust with users, and drive conversions for both pet owners and interested caregivers.
 
-## React Compiler
+## ✨ Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- 🎨 Modern and responsive design
+- 📱 Optimized for mobile devices
+- ⚡ Fast loading and optimized performance
+- 🎯 Conversion-focused sections
+- 💼 Clear calls to action for owners and caregivers
+- 🌐 SEO optimized
 
-## Expanding the ESLint configuration
+## 🚀 Demo
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+[View live demo](https://petcare-six-kohl.vercel.app/)
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🛠️ Technologies Used
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- HTML5
+- CSS3
+- TypeScript
+- React
+- Tailwind CSS
+- Vite
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 📂 Project Structure
+
+```
+src/
+├── pages/          # Main landing pages
+│   └── home/       # Home page with sections and components
+├── shared/
+│   ├── components/ # Reusable components across pages
+│   ├── const/
+│   ├── hooks/
+│   └── utils/
+├── App.tsx
+├── index.css       # Global styles
+└── main.tsx
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🔧 Installation & Usage
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Prerequisites
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- Modern web browser
+- Code editor (VS Code recommended)
+
+### Installation
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/GabiniJQ/petcare.git
 ```
+
+2. Install dependencies:
+
+```bash
+npm install
+```
+
+3. Run the project in development mode:
+
+```bash
+npm run dev
+```
+
+## 📸 Screenshots
+
+### Desktop View
+
+![Desktop View](https://i.imgur.com/V6PVEG5.jpeg)
+
+### Mobile View
+
+![Mobile View](https://i.imgur.com/3TCwofn.png)
+
+## 🎨 Landing Page Sections
+
+- **Hero Section**: Main presentation with value proposition
+- **How It Works**: Step-by-step process for users
+- **Services**: Walks, temporary care, bathing, and grooming
+- **Testimonials**: Reviews from satisfied users
+- **Benefits**: Section focused on attracting caregivers
+- **Final CTA**: Call to action for registration
+
+## 🌟 Highlights
+
+- ✅ User-centered design
+- ✅ Conversion optimization
+- ✅ Fast asset loading
+- ✅ Smooth and appealing animations
+- ✅ Functional contact forms
+- ✅ Social media integration
+
+## 🌟 Acknowledgements
+
+- Photo resources listed in the `resources.txt` file
+
+## 👤 Author
+
+**Jose Gabriel Quintana Guardo**
+
+- GitHub: [@GabiniJQ](https://github.com/tu-usuario)
+- LinkedIn: [joseguardoq](https://www.linkedin.com/in/joseguardoq/)
+- Email: [joseguardoq@gmail.com](mailto:joseguardoq@gmail.com)
+
+---
+
+⭐️ If you liked this project, consider giving it a star on GitHub!
+
+**PetCare** – Built with ❤️ for the well-being of pets 🐶🐱
