@@ -4,6 +4,7 @@
   --color-secondary: #fffefa;
 
   --color-primary-dark: #d47420;
+  --color-primary-hover: #ffaa60;
   --color-secondary-dark: #f7f7f7;
   --color-blue-dark: #234566;
   --color-blue-black: #001325;
@@ -15,8 +16,11 @@
   --font-title: 'Poppins', sans-serif;
 }
 
-:root {
-  font-family: 'Poppins', sans-serif;
+/* Firefox */
+* {
+  scrollbar-width: auto;
+  scrollbar-color: var(--color-primary-hover) var(--color-secondary-dark);
+  scrollbar-gutter: auto;
 }
 
 .hero-bg {
