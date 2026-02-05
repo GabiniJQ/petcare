@@ -32,7 +32,7 @@ const Testimonials = () => {
     <motion.section
       className='flex flex-col items-center gap-10 py-10 px-4 sm:py-20 sm:px-20 lg:gap-20 xl:px-40'
       onViewportEnter={() => updateCurrentSection(NAVIGATION.TESTIMONIALS)}
-      viewport={{ amount: 0.8 }}
+      viewport={{ amount: 0.4 }}
     >
       <h1 className='subtitle scroll-mt-25' id={NAVIGATION.TESTIMONIALS}>
         Dueños y cuidadores que ya confían en nosotros

@@ -5,19 +5,31 @@ import {
 } from 'react-icons/fa'
 import { FaSquareXTwitter } from 'react-icons/fa6'
 import Separator from './Separator'
+import { motion } from 'motion/react'
+import useStore from '../../store/useStore'
+import { NAVIGATION } from '../../shared/const/navigation'
 
 const Footer = () => {
+  const { updateCurrentSection } = useStore()
+
   return (
-    <footer className='flex flex-col bg-blue-dark py-6 px-6 gap-6'>
+    <motion.footer
+      className='flex flex-col bg-blue-dark py-6 px-6 gap-6'
+      onViewportEnter={() => updateCurrentSection(NAVIGATION.CONTACT)}
+    >
       <div className='grid grid-cols-3 gap-10 items-center '>
         <div className='flex flex-col justify-evenly items-center'>
-          <img src='/img/petcare-logo-white.webp' alt='PetCare logo blanco' className='w-1/3' />
+          <img
+            src='/img/petcare-logo-white.webp'
+            alt='PetCare logo blanco'
+            className='w-1/3'
+          />
 
           <div className='flex justify-between text-white w-full max-w-20 lg:max-w-1/3'>
-            <FaFacebookSquare className='footer-icon lg:size-8'/>
-            <FaInstagramSquare className='footer-icon lg:size-8'/>
-            <FaYoutubeSquare className='footer-icon lg:size-8'/>
-            <FaSquareXTwitter className='footer-icon lg:size-8'/>
+            <FaFacebookSquare className='footer-icon lg:size-8' />
+            <FaInstagramSquare className='footer-icon lg:size-8' />
+            <FaYoutubeSquare className='footer-icon lg:size-8' />
+            <FaSquareXTwitter className='footer-icon lg:size-8' />
           </div>
         </div>
 
@@ -65,7 +77,7 @@ const Footer = () => {
           <p>© 2026 Diseño y desarrollo por Jose Guardo.</p>
         </div>
       </div>
-    </footer>
+    </motion.footer>
   )
 }
 

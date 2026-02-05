@@ -11,7 +11,7 @@ const Benefits = () => {
     <motion.section
       className='flex flex-col gap-10 py-10 px-4 bg-primary sm:py-20 sm:px-20 lg:gap-20 xl:px-60 xl:bg-benefits'
       onViewportEnter={() => updateCurrentSection(NAVIGATION.BENEFITS)}
-      viewport={{ amount: 0.8 }}
+      viewport={{ amount: 0.4 }}
     >
       <h1 className='subtitle text-white scroll-mt-25' id={NAVIGATION.BENEFITS}>
         Tu tranquilidad es nuestra prioridad

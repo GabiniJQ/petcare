@@ -11,7 +11,7 @@ type NavBtnProps = {
 }
 
 const NavBtn = ({ className, children, target }: NavBtnProps) => {
-  const { currentSection, updateCurrentSection } = useStore()
+  const { currentSection } = useStore()
   const { isScrollUp } = useTopScreen()
 
   return (
@@ -22,7 +22,6 @@ const NavBtn = ({ className, children, target }: NavBtnProps) => {
         isScrollUp && 'lg:text-shadow-neutral-50 lg:text-shadow-md',
       )}
       onClick={() => {
-        updateCurrentSection(target)
         scrollTo(target)
       }}
     >
