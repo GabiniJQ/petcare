@@ -25,7 +25,7 @@ const Services = () => {
     <motion.section
       className='flex flex-col gap-10  py-10 px-4 bg-blue-black sm:py-20 sm:px-20 xl:px-40'
       onViewportEnter={() => updateCurrentSection(NAVIGATION.SERVICES)}
-      viewport={{ amount: 0.8 }}
+      viewport={{ amount: 0.2 }}
     >
       <h1 className='subtitle text-white scroll-mt-25' id={NAVIGATION.SERVICES}>
         Servicios pensados para cada necesidad
@@ -36,7 +36,7 @@ const Services = () => {
         whileInView='show'
         initial='hidden'
         variants={container}
-        viewport={{ amount: 0.7, once: true }}
+        viewport={{ amount: 0.2, once: true }}
       >
         <ServiceCard>
           <ServiceCardTitle>Paseos diarios y personalizados</ServiceCardTitle>
